@@ -10,6 +10,13 @@ public class Main {
             System.out.println("Введите размер массива и нажмите Enter: ");
 
             int x = scanner.nextInt();
+
+            try {
+            x = Integer.parseInt(scanner.nextLine());
+             } catch (NumberFormatException e) {
+            e.printStackTrace();
+            }
+
             String array[] = new String[x];
 
             for (int i = 0; i < array.length; i++) {
@@ -26,11 +33,11 @@ public class Main {
             }
             for(int i=0;i<array.length;i++){
             if(array[i].length()==y){
-                System.out.println("Слово с наибольшей длиной  " + '"' + array[i] + '"' + "  и его длина составляет " + y + " символов" );
+                System.out.println("Слово с наибольшей длиной  " + '"' + array[i] + '"' + "  и его длина составляет " + y + " символа(ов)" );
                 }
             }
+         }
     }
-}
 
 
 
